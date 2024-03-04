@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA- Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale= 1.0">
+<title>Personal Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/a97a0042c0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Images/AC.jpg" class="logo">
+            <ul id="Sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+           
+           
+            <li><a href="#gallery">Gallery</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+            
+
+
+            <i class="fa-solid fa-xmark" onclick="Closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="Openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Student</p>
+            <h1>Hello, My name is <span>Aakriti Chaudhary</span></h1>
+        </div>
+    </div>
+</div>
+
+<!-- ------------about-------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/Photo.jpg">
+            </div>
+            <div class="about-col-2"> 
+                <h1 class="Sub-title">About Me</h1>
+                <p>Hello, My name is <span>Aakriti Chaudhary</span> <br> I'm studying in grade XI(Computer Science ) <br>at Xavier International College.</h1></p>
+           
+                <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p> 
+                <p class="tab-links" onclick="opentab('Hobbies')">Hobbies</p>
+
+                <p class="tab-links" onclick="opentab('Education')">Education</p>
+                <p class="tab-links" onclick="opentab('Interests')">Interests</p>
+            </div>
+
+            <div class="tab-contents active-tab" id="Skills">
+                <ul>
+                    <li><span>Cooking <br> Writing Music</span></li>
+                </ul>
+                </div>
+            <div class="tab-contents" id="Hobbies">
+                <ul>
+                    <li><span>Dance <br> Photography</span> </li>
+                </ul>
+                </div>
+            <div class="tab-contents" id="Education">
+                <ul>
+                    <li><span>Secondary Education Examination Passed Out<br> Still Studying +2 </span> </li>
+                </ul>
+            </div>
+                <div class="tab-contents" id="Interests">
+                    <ul>
+                        <li><span>Singing </span> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- -----------------Gallery------------- -->
+<div id="gallery">
+    <div class="container">
+
+        <h1 class="Sub-title">Gallery</h1>
+        <div class="gallery-list">
+            <div class="Photos">
+
+                <img src="Images/Hills.jpg" ></div>
+                <div class="Photos">
+                <img src="Images/hills1.jpg" ></div>
+                <div class="Photos">
+                <img src="Images/Mountain.jpg" ></div>
+                <div class="Photos">
+
+                <img src="Images/Sunset.jpg" ></div>
+                <div class="Photos">
+                <img src="Images/Sunset1.jpg" ></div>
+                <div class="Photos">
+                <img src="Images/Sunset2.jpg" ></div>
+                <div class="Photos">
+                <img src="Images/Sunset3.jpg" ></div>
+                <div class="Photos">
+                <img src="Images/God.jpg" ></div>
+                
+        
+        </div>
+        <div class="layer">
+            <h3>Gallery Photos</h3>
+            <p>The above Photos are clicked by me from different places like Kalinchowk, Nagarkot, Chitwan, Basantapur etc.</p>
+        </div>
+
+<!------------ Contact Me ------------------ -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me </h1>
+                <p><i class="fa-solid fa-paper-plane"></i>aakritichaudhary9.19@.com</p>
+                
+                <div class="social-icons">
+                   
+                <a href="https://www.facebook.com/profile.php?id=100085712192236"><i class="fab  fa-facebook"></i></a>
+                <a href="https://www.instagram.com/_rose_9.19?igsh=c3FvbWRuOWNjazc5"><i class="fab fa-instagram"></i></a>
+                </div>
+                <a href="Images/pdf.jpg" download class=" btn btn2 " > Download CV </a>
+            </div>
+            
+                <div class="contact-right">
+           <form name="submit-to-google-sheet"> 
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email"required>
+            <textarea name="Message"  rows="7" placeholder="Your Message" ></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+           </form>
+           <span id="msg"></span>
+        </div>
+        </div>
+        
+
+    
+</div>
+</div>
+
+
+
+<script>
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+   
+}
+
+</script>
+
+<script>
+    var Sidemenu =document.getElementById("Sidemenu")
+    function Openmenu(){
+    Sidemenu.style.right="0";
+    }
+    function Closemenu(){
+    Sidemenu.style.right="-200px";
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzckgknOQWmXKT5MElbcYrJxHVOmbRGmvilwPPunJoq2yScEBbNK1HvXkkWRJlG02lf/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML ="Message sent sucessfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
